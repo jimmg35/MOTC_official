@@ -1,0 +1,55 @@
+.Typography{
+  @apply mb-[0.35em] font-thin flex;
+  &.center{
+    @apply text-center;
+  }
+  &.bold{
+    @apply font-bold
+  }
+  &.h1{
+    @apply text-8xl;
+    line-height: 1.167;
+    letter-spacing: -0.015em;
+  }
+  &.h2{
+    @apply text-6xl;
+    line-height: 1.2;
+    letter-spacing: -0.008em;
+  }
+  &.h3{
+    @apply text-5xl;
+    line-height: 1.6;
+    letter-spacing: 0em;
+  }
+  &.h4{
+    @apply text-4xl;
+    line-height: 1.2;
+    letter-spacing: 0.007em;
+  }
+  &.h5{
+    @apply text-2xl;
+    line-height: 1.3;
+    letter-spacing: 0em;
+  }
+  &.h6{
+    @apply text-xl;
+    line-height: 1.6;
+    letter-spacing: 0.007em;
+  }
+  &.subtitle{
+    @apply text-base;
+    line-height: 1.75;
+    letter-spacing: 0.009em;
+  }
+  &.body{
+    @apply text-base font-thin;
+    line-height: 1.5;
+    letter-spacing: 0.009em;
+  }
+  &.caption{
+    @apply text-xs font-thin;
+    line-height: 1.66;
+    letter-spacing: 0.03333em;
+    display: block;
+  }
+}

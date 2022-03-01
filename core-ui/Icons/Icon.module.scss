@@ -1,0 +1,40 @@
+@namespace xlink 'http://www.w3.org/1999/xlink';
+
+.cui-icon{
+  @apply flex justify-center;
+  height: 50px;
+  width: 50px;
+  display: inline-flex;
+  &.sm{
+    height: 15px;
+    width: 15px;
+  }
+  &.md{
+    height: 25px;
+    width: 25px;
+  }
+  &.larg{
+    height: 35px;
+    width: 35px;
+  }
+  &.xlarg{
+    height: 50px;
+    width: 50px;
+  }
+  &.xsm{
+    height: 10px;
+    width: 10px;
+  }
+
+  svg{
+    @apply fill-primary;
+    height: 100%;
+    width: 100%;
+  }
+
+
+  &.light svg{
+    fill: white;
+
+  }
+}

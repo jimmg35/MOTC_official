@@ -1,0 +1,15 @@
+.Container{
+  @apply w-full mx-auto block px-4 mb-8;
+
+  &.col {
+    @apply flex flex-col;
+  }
+
+  &.row {
+    @apply flex;
+  }
+
+  &.center {
+    @apply items-center justify-center;
+  }
+}

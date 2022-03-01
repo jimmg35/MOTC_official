@@ -1,0 +1,29 @@
+@import '/styles//globals.scss';
+
+.IntroContentCard{
+  @apply flex;
+  @media (max-width: $md) {
+    @apply flex-col;
+  }
+  .overview{
+    @apply flex flex-col flex-[0.3] p-6 bg-gradient-to-r from-gradi-start to-gradi-stop min-w-[200px] mx-4;
+    @media (max-width: $md) {
+      @apply mx-0;
+    }
+    .title{
+      @apply text-white text-lg font-bold;
+    }
+    .description{
+      @apply text-white text-sm font-thin my-3;
+    }
+  }
+  .detail{
+    @apply flex p-5 flex-1 flex-wrap overflow-auto;
+    @media (max-width: $md) {
+      @apply px-1;
+    }
+    & > * {
+      @apply w-[var(--detailItemWidth)] justify-start;
+    }
+  }
+}

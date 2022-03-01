@@ -1,0 +1,12 @@
+.Kanban{
+  @apply relative h-[500px] w-full overflow-hidden;
+  .kanbanImg{
+    @apply h-full;
+    background-image: var(--KanbanImg);
+    background-position: center;
+    background-size: cover;
+  }
+  .KanbanContent{
+    @apply absolute flex flex-col h-full top-0 p-7 justify-center;
+  }
+}

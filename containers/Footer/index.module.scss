@@ -1,0 +1,11 @@
+.footer{
+  @apply px-2 py-10 flex flex-col items-center mt-10 bg-gradient-to-r from-gradi-start to-gradi-stop;
+
+  .group{
+    @apply m-2 min-w-[50vw] flex flex-wrap;
+  }
+
+  .credit{
+    @apply flex w-full justify-end text-white text-xs font-thin;
+  }
+}

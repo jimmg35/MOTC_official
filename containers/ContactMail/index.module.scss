@@ -1,0 +1,25 @@
+@import '/styles/globals.scss';
+
+.ContactMail{
+  @apply flex items-center w-full px-6 py-10 bg-primary-light bg-opacity-20;
+  @media (max-width: $md) {
+    @apply flex-col;
+  }
+  .contentLeft{
+    @apply flex flex-col flex-1 px-4;
+    .textContent{
+      @apply max-w-[400px] py-3;
+    }
+  }
+  .contentRight{
+    @apply w-[500px] max-w-full relative;
+    .action{
+      @apply absolute top-1/2 left-1/2 transform translate-x-[-36%] translate-y-[-50%]
+      text-white bg-gradi-start px-5 py-1 rounded-full
+      cursor-pointer;
+      &:hover{
+        @apply bg-gradient-to-r from-gradi-start to-gradi-stop transition scale-105 drop-shadow-xl;
+      }
+    }
+  }
+}

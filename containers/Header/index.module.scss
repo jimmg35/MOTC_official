@@ -1,0 +1,41 @@
+@import '/styles//globals.scss';
+
+.headerRoot{
+  @apply flex items-center sticky top-0 left-0 px-5 py-2 bg-current bg-bg shadow-md min-h-[50px] z-20;
+  @media (max-width: $md) {
+    @apply justify-between;
+  }
+
+  .logo{
+    @apply pr-4 text-xl;
+  }
+
+  .mainLink{
+    @apply flex flex-1 items-center;
+
+    @media (max-width: $md) {
+      @apply hidden;
+    }
+  }
+
+  .endLink{
+    @media (max-width: $md) {
+      @apply hidden;
+    }
+  }
+
+  .menuButton{
+    @apply hidden;
+    @media (max-width: $md) {
+      @apply flex;
+    }
+  }
+
+  .menuItem{
+    @apply my-1;
+  }
+
+  .blocker{
+    @apply fixed top-0 left-0 h-full w-full bg-black bg-opacity-50;
+  }
+}

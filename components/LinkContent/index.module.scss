@@ -1,0 +1,7 @@
+.LinkContent{
+  @apply p-1 cursor-pointer text-white text-opacity-80;
+  transition: all 0.3s;
+  &:hover{
+    @apply underline text-opacity-100;
+  }
+}

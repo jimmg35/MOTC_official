@@ -1,0 +1,48 @@
+.detailCard {
+    @apply mx-6 my-3;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-style: dashed;
+    border-width: 1px;
+    border-color: rgb(179, 179, 179);
+    padding: 20px;
+    width: 246px;
+    height: 260px;
+    .titleSection {
+        @apply mb-2;
+        display: flex;
+        .iconContainer {
+            @apply border-primary mr-2 bg-white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 55px;
+            height: 55px;
+            padding: 5px;
+            border-style: solid;
+            border-width: 2px;
+            border-radius: 5px;
+            .icon {
+            }
+        }
+        .title {
+            .main {
+                margin: 0px;
+            }
+            .sub {
+                font-size: 5px;
+                margin-bottom: 7px;
+            }
+        }
+    }
+    .contentText {
+        @apply mb-4;
+        font-size: 14px;
+        color: rgb(148, 148, 148);
+    }
+}
+.detailCard:hover {
+    @apply bg-primary text-white;
+    transition: 0.3s;
+}

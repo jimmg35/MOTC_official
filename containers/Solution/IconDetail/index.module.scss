@@ -1,0 +1,25 @@
+.iconDetail {
+    display: flex;
+    align-items: center;
+    .iconContainer {
+        @apply mb-4 bg-primary;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .detailContainerLeft {
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+    }
+    .detailContainerRight {
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+        align-items: flex-end;
+    }
+}

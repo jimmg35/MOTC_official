@@ -1,0 +1,15 @@
+.MenuDrawer{
+  @apply fixed z-10 top-0 right-0 max-w-[300px] h-screen overflow-auto flex flex-col bg-gradient-to-r from-gradi-start to-gradi-stop bg-opacity-90 drop-shadow-md p-2 pb-[50px];
+  transition: max-width 0.3s;
+  &.hide{
+    @apply max-w-0 overflow-auto p-0;
+  }
+
+  .header{
+    @apply flex text-white w-full p-2;
+    span{
+      @apply flex-1;
+      text-align: end;
+    }
+  }
+}

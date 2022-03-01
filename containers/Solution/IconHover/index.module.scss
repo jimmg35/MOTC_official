@@ -1,0 +1,25 @@
+.IconHover {
+    @apply mx-5 px-20 pt-6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;
+    .iconContainer {
+        @apply mb-4 border-primary;
+        border-radius: 50%;
+        border-width: 1px;
+        width: 118px;
+        height: 118px;
+        background-color: rgba(255, 255, 255, 0);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+.IconHover:hover {
+    .iconContainer {
+        @apply bg-primary;
+        transition: 0.1s;
+    }
+}

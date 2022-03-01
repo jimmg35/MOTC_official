@@ -1,0 +1,56 @@
+.rotateDetail {
+    .row1 {
+        display: flex;
+        .cusIconDetail1 {
+            display: flex;
+            align-items: center;
+            .textArea1 {
+                @apply mx-2;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+            }
+        }
+        .rotateImgContainer {
+            @apply max-w-[198px] w-full my-8 mx-20;
+        }
+        .cusIconDetail2 {
+            display: flex;
+            align-items: center;
+            .textArea2 {
+                @apply mx-2;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    }
+    .row2 {
+        display: flex;
+        justify-content: space-evenly;
+        .cusIconDetail3 {
+            display: flex;
+            align-items: flex-end;
+            flex-direction: column;
+            flex: 0.25;
+            .textArea3 {
+                @apply mx-2;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+            }
+        }
+        .cusIconDetail4 {
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            flex: 0.2;
+            .textArea4 {
+                @apply mx-2;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    }
+}

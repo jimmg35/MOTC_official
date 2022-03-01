@@ -1,0 +1,36 @@
+.infoCard {
+    @apply mx-5 px-20 pt-6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;
+    .iconContainer {
+        @apply mb-4;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        background-color: rgb(212, 212, 212);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .title {
+        @apply mb-6;
+    }
+    .option {
+        @apply my-2;
+    }
+}
+.infoCard:hover {
+    -moz-box-shadow: 0 0 20px rgb(155, 155, 155);
+    -webkit-box-shadow: 0 0 20px rgb(155, 155, 155);
+    box-shadow: 0 0 20px rgb(155, 155, 155);
+    .iconContainer {
+        @apply bg-primary;
+        transition: 0.5s;
+    }
+    .title {
+        @apply text-primary;
+    }
+}

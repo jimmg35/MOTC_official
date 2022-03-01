@@ -1,0 +1,143 @@
+
+@mixin cui-disabled {
+  @apply cursor-default opacity-60;
+}
+
+@mixin outline {
+  @apply border border-primary border-opacity-50;
+}
+
+@mixin btn-border-drawing($hover: black, $width: 1px, $vertical: top, $horizontal: left, $duration: 0.25s) {
+  // box-shadow: inset 0 0 0 $width white;
+  transition: color $duration calc($duration/3);
+  position: relative;
+  
+  &::before,
+  &::after {
+    border: 0 solid transparent;
+    box-sizing: border-box;
+    content: '';
+    pointer-events: none;
+    position: absolute;
+    width: 0; height: 0;
+    
+    #{$vertical}: 0; 
+    #{$horizontal}: 0;
+  }
+
+  &::before {
+    $h-side: if($horizontal == 'left', 'right', 'left');
+    
+    border-#{$vertical}-width: $width;
+    border-#{$h-side}-width: $width;
+  }
+  
+  &::after {
+    $v-side: if($vertical == 'top', 'bottom', 'top');
+    
+    border-#{$v-side}-width: $width;
+    border-#{$horizontal}-width: $width;
+  }
+  
+  &:hover {
+    // box-shadow: 0px 0px 2px 1px #ffffff9f;
+    
+    &::before,
+    &::after {
+      border-color: $hover;
+      transition: border-color 0s, width $duration, height $duration;
+      width: 100%;
+      height: 100%;
+    }
+    
+    &::before { transition-delay: 0s, 0s, $duration; }
+    
+    &::after { transition-delay: 0s, $duration, 0s; }
+  }
+}
+
+.cui-button {
+  @apply rounded px-5 py-3 min-w-max overflow-hidden shadow relative bg-primary text-text-white hover:bg-opacity-90;
+
+  .ripple {
+    position: absolute;
+    border-radius: 50%;
+    transform: scale(0);
+    animation: rippleEffect 600ms linear;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+
+  .cui-button-label{
+    @apply mx-1 flex justify-center items-center;
+  }
+
+  &.bbEfect{
+    &::after{
+      @apply bg-primary absolute w-[0%] h-[4px] left-1/2;
+      content: "";
+      transition: all 0.2s ease-in-out;
+    }
+    &:hover{
+      &::after{
+        @apply bg-primary w-full left-[0] h-[1px];
+      }
+    }
+  }
+
+  &.borderEffect{
+    @include btn-border-drawing( #bcf3fd86, 1px, bottom, right);
+  }
+
+  &.accent{
+    // @include cui-button(bg-accent);
+
+  }
+  &:disabled{
+    @include cui-disabled;
+    @apply bg-gray-400;
+  }
+  &.outline{
+    @apply bg-opacity-0 text-primary-dark;
+    @include outline;
+  }
+  &.flat{
+    @apply bg-white bg-opacity-10 text-text;
+    box-shadow: none;
+    &:hover{
+      @apply bg-gray-300 bg-opacity-30;
+    }
+  }
+  &.sm {
+    margin: 2px;
+    padding: 2px 4px;
+    min-width: 50px;
+    min-height: 30px;
+  }
+  &.md {
+    margin: 4px;
+    padding: 2px 8px;
+    min-width: 70px;
+    min-height: 40px;
+  }
+  &.larg {
+    margin: 5px;
+    padding: 2px 10px;
+    min-width: 90px;
+    min-height: 50px;
+  }
+  &.xsm {
+    margin: 1px;
+    padding: 2px;
+    min-height: 25px;
+  }
+}
+
+@keyframes rippleEffect {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}

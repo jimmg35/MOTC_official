@@ -1,0 +1,25 @@
+.OperationMode {
+  @apply block;
+  .SelectionTabs{
+    @apply flex items-center justify-center;
+  }
+  .TabContents {
+    @apply flex flex-col;
+
+    .Content{
+      @apply flex flex-col items-center;
+    }
+
+    .ImgWrapper{
+      @apply max-w-[650px] w-full my-8;
+    }
+
+    .description{
+      @apply max-w-[700px] mx-5 mt-5;
+    }
+
+    .hide{
+      @apply hidden;
+    }
+  }
+}

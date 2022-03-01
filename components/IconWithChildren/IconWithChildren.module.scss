@@ -1,0 +1,35 @@
+@mixin inverse {
+  @apply bg-gradient-to-r from-gradi-start to-gradi-stop text-white;
+}
+
+.IconWithChildren{
+  @apply flex items-center justify-center cursor-pointer m-2 p-3;
+  transition: all 0.3s;
+  &.row{
+    @apply flex-row ;
+  }
+  &.col{
+    @apply flex-col;
+  }
+  .content{
+    @apply p-3;
+    &.xsm{ @apply text-xs; }
+    &.sm{ @apply text-sm; }
+    &.md{ @apply text-base; }
+    &.lg{ @apply text-lg; }
+    &.xlg{ @apply text-xl; }
+    &.xxlg{ @apply text-2xl; }
+  }
+  &:hover{
+    @apply text-primary;
+  }
+  &.grow{
+    transform: scale(1.05);
+  }
+  &.bgHoverInverse:hover {
+    @include inverse;
+  }
+  &.active {
+    @include inverse;
+  }
+}

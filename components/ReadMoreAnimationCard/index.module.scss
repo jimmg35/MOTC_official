@@ -1,0 +1,46 @@
+.ReadMoreAnimationCard{
+  @apply flex flex-col justify-center items-center relative w-[350px] h-[400px];
+  background-image: var(--bgImg);
+  background-position: center;
+  background-size: cover;
+  transition: 0.3s all;
+
+  .BlackMask{
+    @apply absolute top-0 left-0 h-full w-full bg-black bg-opacity-60;
+    transition: 0.3s all;
+  }
+
+  .ShownContent{
+    transform: translateY(30px);
+    transition: 0.3s all;
+    z-index: 1;
+  }
+  .HiddenContent{
+    @apply opacity-0 relative;
+    transform: translateY(50px);
+    transition: 0.3s all;
+    z-index: 1;
+  }
+
+  .BGColor{
+    @apply absolute top-0 left-0 w-full h-full bg-gradient-to-r from-black to-black opacity-0;
+    transition: 0.5s all;
+  }
+
+  &:hover {
+    .BlackMask{
+      @apply bg-black bg-opacity-0;
+    }
+    .BGColor{
+      @apply bg-gradient-to-r from-gradi-start to-gradi-stop opacity-60;
+    }
+    .ShownContent{
+      transform: translateY(0px);
+      z-index: 1;
+    }
+    .HiddenContent{
+      @apply opacity-100;
+      transform: translateY(0px);
+    }
+  }
+}

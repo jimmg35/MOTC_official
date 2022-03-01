@@ -1,0 +1,57 @@
+.mainPage {
+    @apply bg-gray-500;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    left: 0px;
+    top: 0px;
+    z-index: 10;
+    // background-image: linear-gradient(to right bottom, #31d89275, #2ee4e446), url("/main2.jpg");
+    background-image: linear-gradient(to right bottom, #000000d0, #02f7ffbd), url("/main2.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    clip-path: polygon(0 0, 60% 0, 40% 100%, 0 100%);
+    /* Add the blur effect */
+    // filter: blur(50px);
+    // -webkit-filter: blur(50px);
+}
+.mainPageSide {
+    @apply bg-gray-700;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    left: 0px;
+    top: 0px;
+    z-index: 9;
+    .textArea {
+        // background-color: rgba(179, 27, 27, 0.432);
+        position: relative;
+        width: 50%;
+        height: 100%;
+        left: 50%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        .textContainer {
+            display: flex;
+            flex-direction: column;
+            .text {
+                font-size: 38px;
+                color: rgb(226, 226, 226);
+                margin-bottom: 20px;
+            }
+            .signBtn {
+                font-size: 26px;
+                border-color: aqua;
+                color: aqua;
+                margin-bottom: 20px;
+            }
+            .copyright {
+                color: rgb(226, 226, 226);
+            }
+        }
+    }
+}

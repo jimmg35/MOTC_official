@@ -1,0 +1,15 @@
+.AboutCard{
+  @apply flex flex-col m-3 pb-3 min-w-[200px];
+  .title{
+    @apply text-white mb-2;
+  }
+  .content{
+    @apply flex flex-col flex-wrap max-h-[200px] text-sm;
+    &.noWrap{
+      @apply flex-nowrap max-h-[unset];
+    }
+    a{
+      @apply text-white mr-2 font-thin;
+    }
+  }
+}

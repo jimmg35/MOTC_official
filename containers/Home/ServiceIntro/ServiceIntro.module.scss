@@ -1,0 +1,18 @@
+.ServiceIntro{
+  @apply flex flex-col w-full items-center;
+  .Tabs{
+    @apply flex max-w-full overflow-auto;
+  }
+  .Content{
+    @apply bg-primary-light bg-opacity-50 w-full;
+  }
+  .hide{
+    @apply hidden;
+  }
+  .IconTitle {
+    @apply flex flex-col items-center;
+    .subtitle{
+      @apply text-sm font-thin whitespace-nowrap;
+    }
+  }
+}

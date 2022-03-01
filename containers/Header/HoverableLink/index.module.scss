@@ -1,0 +1,21 @@
+.HoverableLink{
+  @apply flex flex-col relative;
+
+  .hoverContent{
+    @apply flex flex-wrap fixed h-0 min-h-0 max-h-0 w-full top-[50px] left-0 overflow-hidden bg-gradient-to-r from-gradi-start to-gradi-stop bg-opacity-10 px-3 text-white;
+    transition: all 0.3s;
+
+    & > * {
+      @apply py-1 px-4;
+    }
+  }
+
+  &:hover {
+    .hoverContent{
+      @apply py-10 bg-opacity-90 drop-shadow-md max-h-[400px];
+      min-height: 100px;
+      height: fit-content;
+    }
+  }
+  
+}

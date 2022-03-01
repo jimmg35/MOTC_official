@@ -1,0 +1,10 @@
+.SpecialPart{
+  @apply bg-gray-500 w-full flex justify-center flex-wrap;
+  .Title{
+    @apply text-white text-2xl;
+  }
+  .HiddenChild{
+    @apply flex flex-col justify-center items-center text-white font-thin px-2 text-center;
+  }
+  
+}
